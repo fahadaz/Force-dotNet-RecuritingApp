@@ -1,0 +1,43 @@
+@using rapp.Controllers;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Position pos = (Position)ViewBag.Position;
+}
+<h1>@pos.Name</h1>
+<h5>@pos.Job_Description__c</h5>
+<div class="container">
+    @using(Html.BeginForm("Apply", "Home", FormMethod.Post, new { role = "form" }))
+{
+    @Html.ValidationSummary(true)
+    
+    @Html.AntiForgeryToken()        
+    
+    <div class="form-group">
+         <label for="fname"><strong>First Name</strong></label>
+        <input type="text" class="form-control" id="fname" name="fname" />
+    </div>
+    <div class="form-group">
+         <label for="lname"><strong>Last Name</strong></label>
+        <input type="text" class="form-control" id="lname" name="lname" />
+    </div>
+    
+    <div class="form-group">
+         <label for="email"><strong>Email</strong></label>
+        <input type="email" class="form-control" id="email" name="email" />
+    </div>
+    <div class="form-group">
+        <label for="cletter">Cover Letter</label>
+        <textarea class="form-control" rows="8" id="cletter"></textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="resume">Resume</label>
+        <textarea class="form-control" rows="8" id="resume"></textarea>
+    </div>   
+    <input type="submit" id="btnSubmit" value="Submit" />
+    }
+</div>

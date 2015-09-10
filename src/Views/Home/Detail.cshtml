@@ -1,0 +1,41 @@
+@using rapp.Controllers;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    Position pos = (Position)ViewBag.Position;
+    }
+
+<h1>@pos.Name</h1>
+<div class = "container">
+        
+    <div class="row top-buffer">
+        <div class="col-md-2"><strong>Description</strong></div>
+        <div class="col-md-10">@pos.Job_Description__c</div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-2"><strong>Location</strong></div>
+        <div class="col-md-10">@pos.Location__c</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong>Functional Area</strong></div>
+        <div class="col-md-10">@pos.Functional_Area__c</div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong>Skills Required</strong></div>
+        <div class="col-md-10"><pre>@pos.Skills_Required__c</pre></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong>Responsibilities</strong></div>
+        <div class="col-md-10"><pre>@pos.Responsibilities__c</pre></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"><strong>Educational Requirements</strong></div>
+        <div class="col-md-10"><pre>@pos.Educational_Requirements__c</pre></div>
+    </div>
+    <div class="row top-buffer">
+        <div class="btn btn-default">@Html.ActionLink("Apply", "Apply", "Home", new {name = pos.Name}, null)</div>
+    </div>
+</div>

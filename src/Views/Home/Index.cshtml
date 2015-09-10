@@ -1,0 +1,49 @@
+@using rapp.Controllers;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .atop {
+        vertical-align: top;
+    }    
+    
+</style>
+
+<div id="myCarousel" height="600px">
+   <h1>Welcome to ACME Distributions Recruiting Portal</h1>
+   <h1>Positions: @ViewBag.Size</h1>
+   
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-md-3"><strong>Name</strong></div>
+           <div class="col-md-6"><strong>Description</strong></div>
+           <div class="col-md-1"><strong>Location</strong></div>
+           <div class="col-md-1"><strong>Area</strong></div>
+       </div>
+       @foreach(Position p in (List<Position>)ViewBag.Pos)
+       {
+       <div class="row">
+           <div class="col-md-3">
+               @Html.ActionLink(p.Name, "Detail", "Home", new {name = p.Name}, null)               
+           </div>
+           
+           <div class="col-md-6">
+               @p.Job_Description__c
+           </div>
+           <div class="col-md-1">
+               @p.Location__c
+           </div>
+           <div class="col-md-1">
+               @p.Functional_Area__c
+           </div>
+        </div>
+       }
+   </div>
+   
+    
+   
+</div>
+
+

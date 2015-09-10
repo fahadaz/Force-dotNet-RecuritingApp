@@ -1,0 +1,12 @@
+{
+  "AppSettings": {
+    "SiteTitle": "rapp",
+    "ConsumerKey":"",
+    "ConsumerSecret":"",
+    "Username":"",
+    "Password":"",    
+    "IsSandboxUser":"false",
+    "ProdUrl":"https://test.salesforce.com/services/oauth2/token",
+    "SandboxUrl":"https://login.salesforce.com/services/oauth2/token"
+  }
+}
