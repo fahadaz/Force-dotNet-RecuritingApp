@@ -38,6 +38,6 @@ Following are the steps to get this application working on heroku
   }
 }
 ```
-* Use heroku build pack https://github.com/heroku/dotnet-buildpack to create a new heroku application.
+* Use heroku build pack https://github.com/heroku/dotnet-buildpack to create a new heroku application and deploy the code.
 
 Thats it!
