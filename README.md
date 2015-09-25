@@ -23,7 +23,7 @@ Following are the steps to get this application working on heroku
 * Create connected app "rapp" under Setup | Create | Apps | Connected Apps. Use information under API section in next step. 
 * Download the source from this git repo on to your local machine
   https://github.com/fahadaz/Force-dotNet-RecuritingApp
-* Open ~/<applicaltion folder>/src/config.json and add values from previous step and save
+* Open ~/applicaltion folder/src/config.json and add values from previous step and save
 ```  
 {
   "AppSettings": {
