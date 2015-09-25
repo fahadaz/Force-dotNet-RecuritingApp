@@ -13,6 +13,13 @@ Following are the steps to get this application working on heroku
 
 * Need to first install salesforce application using following url 
   https://login.salesforce.com/packaging/installPackage.apexp?p0=04t1a000000EZ6u
+(
+  This force.com application consists of 4 objects
+  * Position - Used to track Positions. Position with status "Open - Approved" will show up on asp.net vnext application
+  * Candidate - Used to track Candidates. 
+  * Job Application - Used for tracking Job Applications. Each candidate can apply for multiple positions.
+  * Review - Used track reviews for Candidate.
+)
 * Create connected app "rapp" under Setup | Create | Apps | Connected Apps. Use information under API section in next step. 
 * Download the source from this git repo on to your local machine
   https://github.com/fahadaz/Force-dotNet-RecuritingApp
