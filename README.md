@@ -1,11 +1,14 @@
 # Force-dotNet-RecuritingApp
 * asp.net vnext integration sample application with a custom force.com app 
-  * This application uses asp.net vnext beta 7 and heroku build pack
+  * This application uses asp.net vnext beta 7
   * Heroku Build pack https://github.com/heroku/dotnet-buildpack
 * This application is posted under Apache License.
 * This application uses source code from https://github.com/developerforce/Force.com-Toolkit-for-NET
+* This application was developed on a mac. If interested in developing asp.net on mac, please refer to following article
+  http://blogs.msdn.com/b/webdev/archive/2014/08/12/develop-asp-net-vnext-applications-on-a-mac.aspx
 
 --------------------------------------------------------------------------------------
+
 Following are the steps to get this application working on heroku
 
 * Need to first install salesforce application using following url 
